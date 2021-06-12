@@ -16,11 +16,11 @@ const App = () => {
           <Route path='/' exact>
             <Main />
           </Route>
-          <Route path='/bipartite'>
-            <BipartiteGraph />
-          </Route>
           <Route path='/talk-to-backend'>
             <TalkToBackend />
+          </Route>
+          <Route path='/bipartite'>
+            <BipartiteGraph />
           </Route>
           <Route path='/graph-example'>
             <GraphExample />

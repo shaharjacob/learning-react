@@ -48,7 +48,7 @@ def query():
 def api():
     param1 = request.args.get('param1')
     param2 = request.args.get('param2')
-    print("I'm here!!!")
+    # print("I'm here!!!")
     return jsonify({
         "my_string": f"{param1} {param2}",
     })
