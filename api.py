@@ -4,10 +4,13 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 
 # we can render dict, tuple, or string
-@app.route("/hello-world")
-def hello_world():
+@app.route("/hello-world-string")
+def hello_world_string():
     return "Hello World"
-    # return {"key": "value"}
+
+@app.route("/hello-world-dict")
+def hello_world_dict():
+    return {"key": "value"}
 
 # we can render html syntax (tag language)
 @app.route("/html-syntax")
@@ -31,11 +34,21 @@ def html_page():
     return render_template("example.html")
 
 
-@app.route("/api")
+@app.route("/query", methods=["GET", 'POST'])
+def query():
+    param1 = request.args.get('param1')
+    param2 = request.args.get('param2')
+    return {
+        "param1": param1,
+        "param2": param2
+    }
+
+
+@app.route("/api", methods=["GET", 'POST'])
 def api():
     param1 = request.args.get('param1')
     param2 = request.args.get('param2')
-    # print("I'm here!!!")
+    print("I'm here!!!")
     return jsonify({
         "my_string": f"{param1} {param2}",
     })
