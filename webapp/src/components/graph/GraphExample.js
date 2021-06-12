@@ -26,7 +26,7 @@ const GraphExample = () => {
     edges: {
       color: "#000000"
     },
-    height: "500px"
+    height: "800px"
   };
  
   return (

@@ -19,11 +19,11 @@ const App = () => {
           <Route path='/talk-to-backend'>
             <TalkToBackend />
           </Route>
-          <Route path='/bipartite'>
-            <BipartiteGraph />
-          </Route>
           <Route path='/graph-example'>
             <GraphExample />
+          </Route>
+          <Route path='/bipartite'>
+            <BipartiteGraph />
           </Route>
         </Switch>
       </div>
