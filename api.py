@@ -1,16 +1,21 @@
 import os
 from flask import Flask, render_template, jsonify, request
 
+from utils import get_maximum_weighted_match, get_nodes_for_app, get_edges_for_app
+
 app = Flask(__name__)
+
 
 # we can render dict, tuple, or string
 @app.route("/hello-world-string")
 def hello_world_string():
     return "Hello World"
 
+
 @app.route("/hello-world-dict")
 def hello_world_dict():
     return {"key": "value"}
+
 
 # we can render html syntax (tag language)
 @app.route("/html-syntax")
@@ -51,6 +56,36 @@ def api():
     # print("I'm here!!!")
     return jsonify({
         "my_string": f"{param1} {param2}",
+    })
+
+
+@app.route("/final-example", methods=["GET", "POST"])
+def final_example():
+
+    left_side = [
+        "earth revolve around the sun",
+        "earth circle around the sun",
+        "earth is far away from the sun",
+        "earh is smaller then the sun",
+        "sun is red",
+        "the color of earth is blue",
+        "this is a workshop in react",
+    ]
+
+    right_side = [
+        "earth orbit the sun",
+        "earth turn around the sun",
+        "earth is blue",
+    ]
+
+    left_side_for_app = get_nodes_for_app(props=left_side, start_idx=0, x=200, group=0)
+    right_side_for_app = get_nodes_for_app(props=right_side, start_idx=len(left_side_for_app), x=800, group=1)
+
+    similatiry_edges = get_maximum_weighted_match(left_side, right_side)
+
+    return jsonify({
+        "nodes": left_side_for_app + right_side_for_app,
+        "edges": get_edges_for_app(similatiry_edges),
     })
 
 

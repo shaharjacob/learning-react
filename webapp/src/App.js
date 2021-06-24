@@ -4,7 +4,7 @@ import Main from './components/main/Main'
 import BipartiteGraph from './components/graph/BipartiteGraph'
 import TalkToBackend from './components/main/TalkToBackend'
 import GraphExample from './components/graph/GraphExample'
-
+import FinalExample from './components/graph/FinalExample'
 
 
 const App = () => {
@@ -24,6 +24,9 @@ const App = () => {
           </Route>
           <Route path='/bipartite'>
             <BipartiteGraph />
+          </Route>
+          <Route path='/final-example'>
+            <FinalExample />
           </Route>
         </Switch>
       </div>

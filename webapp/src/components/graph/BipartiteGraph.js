@@ -1,5 +1,4 @@
 import React from 'react';
-import './BipartiteGraph.css'
 import Graph from "react-vis-network-graph";
 
 
