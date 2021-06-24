@@ -61,6 +61,8 @@ def api():
 
 @app.route("/final-example", methods=["GET", "POST"])
 def final_example():
+    # left_side = request.args.get('left').split(',')
+    # right_side = request.args.get('right').split(',')
 
     left_side = [
         "earth revolve around the sun",
@@ -76,6 +78,7 @@ def final_example():
         "earth orbit the sun",
         "earth turn around the sun",
         "earth is blue",
+        "no good match"
     ]
 
     left_side_for_app = get_nodes_for_app(props=left_side, start_idx=0, x=200, group=0)
