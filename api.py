@@ -8,18 +8,16 @@ app = Flask(__name__)
 
 # # we can render dict, tuple, or string
 # @app.route("/")
-# def hello_world_string():
+# def hello_world():
 #     return "Hello World"
 
 # @app.route("/hello-world-string")
-# def hello_world_string():
+# def hello_world2():
 #     return "Hello World 2"
 
-
 # @app.route("/hello-world-dict")
-# def hello_world_dict():
+# def hello_world3():
 #     return {"key": "value"}
-
 
 # # we can render html syntax (tag language)
 # @app.route("/html-syntax")
@@ -85,8 +83,8 @@ app = Flask(__name__)
 #         "no good match"
 #     ]
 
-#     left_side_for_app = get_nodes_for_app(props=left_side, start_idx=0, x=200, group=0)
-#     right_side_for_app = get_nodes_for_app(props=right_side, start_idx=len(left_side_for_app), x=800, group=1)
+#     left_side_for_app = get_nodes_for_app(sentences=left_side, start_idx=0, x=200, group=0)
+#     right_side_for_app = get_nodes_for_app(sentences=right_side, start_idx=len(left_side_for_app), x=800, group=1)
 
 #     similatiry_edges = get_maximum_weighted_match(left_side, right_side)
 
