@@ -7,7 +7,9 @@ Select **Add to PATH** when it asked.
 
 3. Open vscode -> *Open folder* -> choose Desktop or wherever you want to work  
 
-4.	In vscode, in the top menu, go to: Terminal -> *new terminal*, then type:
+4. In vscode, in the top menu, go to: *File* -> *Auto Save*, make sure you have V on it.
+
+5.	In vscode, in the top menu, go to: *Terminal* -> *new terminal*, then type:
 ```bash
 git clone https://github.com/shaharjacob/learning-react.git
 cd learning-react
@@ -18,7 +20,7 @@ python runme.py
 * It will take a while, since we download a small model for sentence embedding.  
 If everything is good, you should see the output: 0.925.  
 
-5.	now, again in the vscode terminal, type:
+6.	now, again in the vscode terminal, type:
 ```bash
 cd webapp
 npm install react-vis-network-gnpmraph
