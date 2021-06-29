@@ -23,7 +23,7 @@ If everything is good, you should see the output: 0.925.
 6.	now, again in the vscode terminal, type:
 ```bash
 cd webapp
-npm install react-vis-network-gnpmraph
+npm install react-vis-network-graph
 npm install @material-ui/core
 npm install react-router-dom
 npm start
